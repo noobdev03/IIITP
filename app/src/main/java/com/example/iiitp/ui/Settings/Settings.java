@@ -1,4 +1,4 @@
-package com.example.iiitp;
+package com.example.iiitp.ui.Settings;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -12,24 +12,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ic_menu_ebook extends Fragment {
+import com.example.iiitp.R;
 
-    private IcMenuEbookViewModel mViewModel;
+public class Settings extends Fragment {
 
-    public static ic_menu_ebook newInstance() {
-        return new ic_menu_ebook();
+    private SettingsViewModel mViewModel;
+
+    public static Settings newInstance() {
+        return new Settings();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.ic_menu_ebook_fragment, container, false);
+        return inflater.inflate(R.layout.settings_fragment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(IcMenuEbookViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(SettingsViewModel.class);
         // TODO: Use the ViewModel
     }
 
